@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-image: linear-gradient(rgb(228, 26, 194) ,blue);
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            height: 40px;
+            width: 100px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(181, 0, 0);
+            box-shadow:0px 0px 10px rgb(0, 0, 0);
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            }
+
+        button::before{
+            background-color: black;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transition: all 1s;
+            transform-origin: left;
+            z-index: -1;
+        }
+        
+        button:hover::before{
+            transform: scaleX(1);
+
+        }
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <button>
+                hire me ! 
+            </button>
+       
+    </div>
+</body>
+</html>
